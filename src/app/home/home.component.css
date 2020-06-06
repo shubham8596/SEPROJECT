@@ -1,0 +1,36 @@
+.home-card {
+    width: 250px;
+    height: auto;
+  }
+
+  .txt1{
+      margin-left: 2px;
+      color: rgb(99, 89, 89);
+   }
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+    color: #000;
+}
+.mat-card{
+
+    border: 8px rgb(60, 71, 82) #000;
+    border-radius: 8px !important;
+
+   }
+  
+::ng-deep .mat-label{
+    position: relative !important;
+    margin-top:55px;
+}
+
+.home-form {
+  width: 100%;
+}
+
+.home-full-width {
+  margin-top: 65px;
+  margin-left: 25px;
+  width: 35%;
+}

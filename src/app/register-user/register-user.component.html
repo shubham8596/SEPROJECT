@@ -1,0 +1,86 @@
+<form class="register-form" [formGroup]="registerForm">
+  <mat-form-field class="register-full-width" appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Firstname" formControlName="firstname" maxlength="100" required>
+    <mat-hint align="end">
+      {{firstname.value.length}}/100
+    </mat-hint>
+
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error *ngIf="firstname.hasError('required')">
+      <strong>Firstname is required</strong>
+
+    </mat-error>
+
+  </mat-form-field>
+  <mat-form-field class="register-full-width1" appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Lastname" formControlName="lastname" maxlength="100" required>
+    <mat-hint align="end">
+      {{lastname.value.length}}/100
+    </mat-hint>
+
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error *ngIf="lastname.hasError('required')">
+      <strong>Lastname is required</strong>
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="register-full-width2" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="Email" formControlName="email" maxlength="100" required>
+    <mat-hint align="end">
+      {{email.value.length}}/100
+    </mat-hint>
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="email.hasError('required')">
+      <strong>Email is required</strong>
+    </mat-error>
+    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="register-full-width2" appearance="outline">
+    <mat-label>Contact Number</mat-label>
+    <input matInput matInput placeholder="Contact Number" formControlName="contactNumber" maxlength="10" required>
+    <mat-hint align="end">
+      {{contactNumber.value.length}}/10
+    </mat-hint>
+    <mat-error *ngIf="contactNumber.hasError('required')">
+      <strong>Contact Number is required</strong>
+    </mat-error>
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="register-full-width2" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input maxlength="20" minlength="6" type="password" matInput placeholder="Password" formControlName="password"
+      required>
+    <mat-icon matSuffix>lock</mat-icon>
+    <mat-error *ngIf="password.hasError('required')">
+      <strong>Password is required</strong>
+    </mat-error>
+    <mat-error *ngIf="password.hasError('minlength')">
+      <strong>Required length is at least 6 characters</strong>
+    </mat-error>
+    <mat-hint align="end">
+      {{password.value.length}}/20
+    </mat-hint>
+  </mat-form-field>
+  <mat-form-field class="register-full-width1" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input maxlength="20" minlength="6" type="password" matInput placeholder="confirmPassword"
+      formControlName="confirmPassword" required>
+    <mat-icon matSuffix>lock</mat-icon>
+    <mat-error *ngIf="confirmPassword.hasError('required')">
+      <strong>Password is required</strong>
+    </mat-error>
+    <mat-error *ngIf="confirmPassword.hasError('mustMatch')">
+      Passwords must match
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <button style="margin-left: 30px;" mat-raised-button color="primary" [disabled]="!registerForm.valid"
+    (click)="onSubmit()">Register</button>
+</form>

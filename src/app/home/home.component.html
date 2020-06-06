@@ -1,0 +1,52 @@
+<div style="padding:10px">
+    <h1  style="margin-top: 6%;margin-left: 45%;">Login</h1>
+    <mat-form-field class="home-full-width" style="margin-left: 30%;margin-top: 1%;">
+        <mat-label>User Id</mat-label>
+        <input matInput #message maxlength="256" placeholder="Ex. 1">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="getById(message.value)">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-grid-list cols="4" rowHeight="380px">
+        <mat-grid-tile *ngFor="let user of users">
+            <mat-card class="home-card" style="background-color:lightsteelblue">
+                <mat-card-header>
+                    <mat-card-title>{{user.first_name}} {{user.last_name}}</mat-card-title>
+                    <mat-card-subtitle>User ID: <b>{{user.id}}</b></mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src={{user.photo}}
+                    onerror="this.onerror=null; this.src='../../assets/default.png';"> -->
+                <mat-card-content>
+
+                    <p class="txt1"><span class="material-icons">
+                            contact_mail
+                        </span> {{user.email}}</p>
+
+                    <p class="txt1"><span class="material-icons">
+                            call
+                        </span>{{user.contact_number}}</p>
+                </mat-card-content>
+                <mat-card-actions style="display:flexbox; justify-content: center; align-items: center;">
+                    <button color="primary" mat-raised-button style="width: 46.5%; padding: 4px;" (click)="openDialog(user)"><span
+                            class="material-icons" style="margin-top: 4px; margin-right: 10px;">
+                            edit
+                        </span>Edit</button>
+                    <button color="primary" mat-raised-button style="width: 46.5%; padding: 4px; margin-right: -1px;"
+                        (click)="deleteProduct(user.id)">
+                        <span class="material-icons" style="margin-top: 4px; margin-right: 10px;">
+                            delete
+                        </span>Delete</button>
+                </mat-card-actions>
+
+                <mat-card-actions style="display:flexbox; justify-content: center; align-items: center;">
+                    <button color="primary" mat-raised-button style="width: 46.5%; padding: 4px;" routerLink="/ridebooking"><span
+                            class="material-icons" style="margin-top: 4px; margin-right: 10px;">
+                            directions_car
+                        </span>Book Ride</button>
+                </mat-card-actions>
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

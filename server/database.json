@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "photo": "https://s3.amazonaws.com/uifaces/faces/twitter/wtrsld/128.jpg",
+      "first_name": "Shubham",
+      "last_name": "Jadhav",
+      "email": "shubham@gmail.com",
+      "password": "ssssss",
+      "contact_number": "9876543210",
+      "id": 1
+    }
+  ],
+  "city": [
+    {
+      "uid": "1",
+      "source": "aundh",
+      "destination": "hadapsar",
+      "amount": 50,
+      "id": 1
+    }
+  ]
+}

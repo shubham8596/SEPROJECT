@@ -1,0 +1,56 @@
+<form class="register-form" [formGroup]="registerForm">
+  <mat-form-field class="register-full-width" appearance="outline">
+    <mat-label>User Id</mat-label>
+    <input matInput  #message placeholder="User Id" formControlName="uid" maxlength="100" required>
+    
+
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error *ngIf="uid.hasError('required')">
+      <strong>User id is required</strong>
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="register-full-width1" appearance="outline">
+    <mat-label>Source Place</mat-label>
+    <input matInput placeholder="source" formControlName="source" maxlength="100" required>
+    <mat-icon matSuffix>location_on</mat-icon> 
+
+<mat-error *ngIf="source.hasError('required')">
+      <strong>Source place is required</strong>
+    </mat-error>
+  </mat-form-field> 
+
+  <mat-form-field class="register-full-width2" appearance="outline">
+    <mat-label>Destination Place</mat-label>
+    <input matInput placeholder="destination" formControlName="destination" maxlength="100" required>
+    <mat-icon matSuffix>location_on</mat-icon> 
+    <mat-error *ngIf="destination.hasError('required')">
+      <strong>Destination place is required</strong>
+    </mat-error>
+  </mat-form-field>
+  <br>
+  
+  <br>
+  <button style="margin-left: 30px;" mat-raised-button color="primary" type="reset" (click)="onSubmit()">Book Ride</button>
+  <!-- <button style="margin-left: 30px;" mat-raised-button color="primary" type="reset" (click)="getByCityId(message.value)">Booking Histrory</button>
+
+  <mat-grid-list cols="4" rowHeight="580px">
+    
+    <mat-grid-tile *ngFor="let user of cities">
+      
+        <mat-card class="home-card">
+            <mat-card-header>
+                <mat-card-title>User ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{user.uid}} </mat-card-title>
+                
+                <mat-card-title>Source &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{user.source}} </mat-card-title>
+                <mat-card-title>Destination : {{user.destination}} </mat-card-title>
+                <mat-card-title>Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{user.amount}} </mat-card-title>
+                
+            </mat-card-header>
+          
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+   -->
+
+</form>

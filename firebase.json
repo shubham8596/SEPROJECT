@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Crud",
+      "public": "docs/",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" *ngIf="router.url!=='/'" >
+   <div style=" margin-left: 4px ;"></div>
+  <button *ngIf="router.url!=='/loadbooking' && router.url!=='/ridebooking'" mat-button routerLink="/home"><span class="material-icons">
+    home
+    </span>Home</button>
+  <button *ngIf="router.url!=='/loadbooking' && router.url!=='/ridebooking'" mat-button routerLink="/register"><span class="material-icons">
+    person_add
+    </span>Register User</button>
+    <button *ngIf="router.url==='/home' || router.url==='/aboutus' || router.url==='/contactus' || router.url==='/register'" mat-button routerLink="/aboutus" style="margin-left: 71%;">about us</button>
+    <button *ngIf="router.url==='/home' || router.url==='/aboutus' || router.url==='/contactus' || router.url==='/register'" mat-button routerLink="/contactus">contact us</button>
+     <button *ngIf="router.url==='/loadbooking' || router.url==='/ridebooking'" mat-button routerLink="/loadbooking"><span class="material-icons">
+      history
+  </span>Ride History</button>
+
+<button *ngIf="router.url==='/loadbooking' || router.url==='/ridebooking'" mat-button routerLink="/home"><span class="material-icons">
+  power_settings_new
+</span>Logout</button>
+</mat-toolbar>
+<router-outlet></router-outlet>

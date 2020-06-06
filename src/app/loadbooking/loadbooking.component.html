@@ -1,0 +1,21 @@
+<br><br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button mat-raised-button color="primary" (click)="back()">Back</button>
+<h1 align="center" style="color: blue;">Booking History</h1>
+<mat-grid-list cols="4" rowHeight="200px">
+    
+        <mat-grid-tile *ngFor="let user of cities">
+          
+            <mat-card class="home-card" style="background-color:lightsteelblue">
+                <mat-card-header>
+                    <mat-card-title>Booking ID &nbsp;: {{user.id}} </mat-card-title>
+                    <mat-card-title>User ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{user.uid}} </mat-card-title>
+                    <mat-card-title>Source &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{user.source}} </mat-card-title>
+                    <mat-card-title>Destination&nbsp;: {{user.destination}} </mat-card-title>
+                    <mat-card-title>Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{user.amount}} ₹ </mat-card-title>
+                    
+                </mat-card-header>
+                
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>

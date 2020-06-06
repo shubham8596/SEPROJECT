@@ -1,0 +1,46 @@
+.page {
+    padding: 1em;
+    min-height:100vh;
+    background-color:#ffffff ;
+
+}
+.text-font{
+	font-size: 75px;
+	/*color:#0FC4C2;*/
+	color:#3f51b5;
+	font-weight:800;
+}
+.img{
+	width:25%;
+	height:25%;
+}
+.page-containt{
+	padding-top:23vh;
+
+}
+@media(max-width:420px)
+{
+	.text-font{
+	font-size:45px;
+	/*color:#0FC4C2;*/
+	color:#3f51b5;
+	font-weight:600;
+	}
+	.img{
+	width:70%;
+	height:70%;
+	}	
+}
+@media(width:1024px)
+{
+.text-font{
+	font-size:95px;
+	/*color:#0FC4C2;*/
+	color:#3f51b5;
+	font-weight:600;
+	}
+.img{
+	width:50%;
+	height:50%;
+	}	
+}
